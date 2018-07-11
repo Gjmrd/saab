@@ -11,18 +11,9 @@
 // ==/UserScript==
 
 (function() {
-    console.log(213);
         var script = document.createElement('script');
         script.innerHTML = `
-           function getCookie(name) {
-
-                var matches = document.cookie.match(new RegExp(
-                     "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
-                ))
-           return matches ? decodeURIComponent(matches[1]) : undefined
-           }
-
-            var watchedVideoToday = getCookie("watchedVideoToday");
+            var watchedVideoToday = getCookieШеуь("watchedVideoToday");
             if (isNaN(watchedVideoToday))
                 watchedVideoToday = "1";
             console.log(document.cookie);
