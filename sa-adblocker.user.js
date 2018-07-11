@@ -13,7 +13,7 @@
 (function() {
         var script = document.createElement('script');
         script.innerHTML = `
-            var watchedVideoToday = getCookieШеуь("watchedVideoToday");
+            var watchedVideoToday = getCookieItem("watchedVideoToday");
             if (isNaN(watchedVideoToday))
                 watchedVideoToday = "1";
             console.log(document.cookie);
