@@ -6,7 +6,6 @@
 // @author       Gjmrd
 // @match        https://smotret-anime.ru/*
 // @include      https://smotret-anime.ru/*
-// @include      https://shikimori.org/*
 // @grant        none
 // ==/UserScript==
 
