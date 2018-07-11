@@ -1,10 +1,11 @@
 // ==UserScript==
-// @name         Smotert-anime add blocker
+// @name         Smotret-anime adblocker
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  Turns off smotret-anime adds
 // @author       Gjmrd
 // @match        https://smotret-anime.ru/*
+// @match        https://play.shikimori.org/*
 // @include      https://smotret-anime.ru/*
 // @include      https://play.shikimori.org/*
 // @grant        none
