@@ -22,7 +22,7 @@
             }
             var expireTime = (new Date()).setTime((new Date()).getTime() + (1000 * 60 * 60));
             setCookieItem('watchedVideoToday', +watchedVideoToday+1, '/');
-            setCookieItem('watchedPromoVideo', (new Date()).getTime(), expireTime, '/', '');
+            setCookieItem('watchedPromoVideo', (new Date()).getTime(), expireTime, '/');
             setCookieItem('lastDate', lastDate, '/');
         `;
         script.setAttribute('id', 'super_id_name');
