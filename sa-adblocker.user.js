@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         New Userscript
+// @name         Smotret anime add blocker
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.3
 // @description  Turns off smotret-anime adds
 // @author       Gjmrd
 // @match        https://smotret-anime.ru/*
