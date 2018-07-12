@@ -14,8 +14,8 @@
         var script = document.createElement('script');
         script.innerHTML = `
             var watchedVideoToday = getCookieItem("watchedVideoToday");
-            var lastDate = getCookieItem("lastDate");
-            var today = (new Date).getDate();
+            var lastDate          = getCookieItem("lastDate");
+            var today             = (new Date).getDate();
             if ((isNaN(watchedVideoToday)) || (today != lastDate)){
                 watchedVideoToday = 1;
                 lastDate = today;
