@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         Smotret anime add blocker
+// @name         Smotret-anime addblocker
 // @namespace    http://tampermonkey.net/
-// @version      0.3
+// @version      0.4
 // @description  Turns off smotret-anime adds
 // @author       Gjmrd
 // @match        https://smotret-anime.ru/*
@@ -14,9 +14,12 @@
         var script = document.createElement('script');
         script.innerHTML = `
             var watchedVideoToday = getCookieItem("watchedVideoToday");
-            if (isNaN(watchedVideoToday))
-                watchedVideoToday = "1";
-            console.log(document.cookie);
+            var lastDate = getCookieItem("lastDate");
+            if ((isNaN(watchedVideoToday)) || ((new Date ()) != lastDate)){
+                watchedVideoToday = 1;
+                lastDate = new Date();
+                setCookieItem('lastDate', lastDate, '/');
+            }
             var expireTime = (new Date()).setTime((new Date()).getTime() + (1000 * 60 * 60));
             setCookieItem('watchedVideoToday', +watchedVideoToday+1, '/');
             setCookieItem('watchedPromoVideo', (new Date()).getTime(), expireTime, '/', '');
