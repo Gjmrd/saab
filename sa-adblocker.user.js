@@ -15,14 +15,15 @@
         script.innerHTML = `
             var watchedVideoToday = getCookieItem("watchedVideoToday");
             var lastDate = getCookieItem("lastDate");
-            if ((isNaN(watchedVideoToday)) || ((new Date ()) != lastDate)){
+            var today = (new Date).getDate();
+            if ((isNaN(watchedVideoToday)) || (today != lastDate)){
                 watchedVideoToday = 1;
-                lastDate = new Date();
-                setCookieItem('lastDate', lastDate, '/');
+                lastDate = today;
             }
             var expireTime = (new Date()).setTime((new Date()).getTime() + (1000 * 60 * 60));
             setCookieItem('watchedVideoToday', +watchedVideoToday+1, '/');
             setCookieItem('watchedPromoVideo', (new Date()).getTime(), expireTime, '/', '');
+            setCookieItem('lastDate', lastDate, '/');
         `;
         script.setAttribute('id', 'super_id_name');
         document.body.appendChild(script);
