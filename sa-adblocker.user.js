@@ -2,7 +2,7 @@
 // @name         Smotret-anime addblocker
 // @namespace    http://tampermonkey.net/
 // @version      0.4
-// @description  Turns off smotret-anime adds
+// @description  Turns off smotret-anime ads
 // @author       Gjmrd
 // @match        https://smotret-anime.ru/*
 // @include      https://smotret-anime.ru/*
